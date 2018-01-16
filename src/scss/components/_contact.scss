@@ -1,0 +1,44 @@
+.contact{
+  color: #000;
+  background: url('../img/contact__bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .form{
+    &__input,
+    &__textarea{
+      width: 100%;
+      padding: 0 20px;
+      border: none;
+      @include background-rgba($cyan, 0.5);
+      color: #fff;
+      border-left: 5px solid rgba(red($cyan),green($cyan),blue($cyan), 0);
+      font-weight: bold;
+      border-radius: 0;
+      transition: linear 0.3s
+    }
+    &__input:focus,
+    &__textarea:focus{
+      outline: none;
+      border-color: $form-focus;
+      background-color: $cyan;
+      transition: linear 0.3s;
+    }
+    &__input::placeholder, &__textarea::placeholder{
+      color: #fff;
+      font-weight: 300;
+    }
+    &__input{
+      height: 50px;
+    }
+    &__textarea{
+      padding-top: 20px;
+    }
+  }
+  &__info{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+  }
+}

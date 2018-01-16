@@ -1,0 +1,9 @@
+@mixin float-reset {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+@mixin background-rgba($color, $opacity) {
+  background-color: rgba(red($color),green($color),blue($color), $opacity);
+}

@@ -1,0 +1,25 @@
+.about{
+  background-color: $cyan;
+  color: #fff;
+}
+
+@include respond-to(small){
+  .about__image img{
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+};
+
+@include respond-to(medium){
+  .about__text{
+    margin-top: 4em;
+  }
+}
+
+
+@include respond-to(large){
+  .about__text{
+    margin-top: 7em;
+  }
+}

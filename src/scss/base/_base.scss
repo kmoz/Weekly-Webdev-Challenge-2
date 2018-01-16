@@ -1,0 +1,80 @@
+html{
+  font-size: 16px;
+}
+body{
+  background: #fff;
+  font-family: $raleway;
+}
+
+p{
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: $font-light;
+}
+
+a{
+  color: inherit;
+  &:hover{color: $cyan;}
+}
+
+.page-section{
+  padding: 3rem 0;
+}
+
+.heading{
+  font-size: $heading-font-size;
+  font-weight: $font-bold;
+  color: #fff;
+  &--black{
+    color: #000;
+  }
+}
+
+
+@include respond-to(mobile){
+  .heading{
+    text-align: center;
+    font-size: $heading-font-size * 0.5;
+  }
+  .page-section{
+    padding:3rem 5%;
+  }
+}
+
+@include respond-to(small){
+  .heading{
+    text-align: center;
+  }
+}
+
+.img-center{
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-main{
+  @include background-rgba($orange, 0.7);
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: $font-light;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  padding: 0.7em 1em;
+  transition: all 0.3s;
+  &:hover{
+    background-color: $orange;
+    transition: all 0.3s;
+  }
+  &--cyan{
+    @include background-rgba($cyan, 0.7);
+    color: #fff;
+    &:hover{
+      background-color: $cyan;
+      color: #fff;
+    }
+  }
+}
+
+.no-padding{padding: 0;}
+.no-margin{margin: 0;}

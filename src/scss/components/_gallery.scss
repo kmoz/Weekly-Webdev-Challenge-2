@@ -1,0 +1,26 @@
+.gallery{
+  background-color: $yellow;
+  .heading{color: #000;}
+
+
+  &__img{
+    max-width: 100%;
+    vertical-align: center;
+    margin-bottom: 20px;
+  }
+  .btn-blue{
+    color: #fff;
+    background-color: $btn-blue;
+    &:hover{background-color: $btn-blue;}
+  }
+
+}
+
+
+@include respond-to(mobile){
+  .gallery{
+    &__img{
+      margin: 0.7rem auto;
+    }
+  }
+};
